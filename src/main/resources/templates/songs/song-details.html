@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Song detail</h1>
+    <div th:if="${song != null}">
+        <p th:text="|Name: ${song.title}|"></p>
+    </div>
+    <div th:if="${song == null}">
+        Unable to find song
+    </div>
+    <a th:href="@{/songs}">Back to songs list</a>
+</div>
+
+
+</body>
+</html>

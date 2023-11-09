@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Movie detail</h1>
+    <div th:if="${movie != null}">
+        <p th:text="|Name: ${movie.title}|"></p>
+    </div>
+    <div th:if="${movie == null}">
+        Unable to find movie
+    </div>
+    <a th:href="@{/movies}">Back to Movie list</a>
+</div>
+
+
+</body>
+</html>

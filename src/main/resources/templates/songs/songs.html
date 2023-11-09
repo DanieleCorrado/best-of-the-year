@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:insert="fragments/resources :: headResources('Songs')"></head>
+<body>
+<nav th:replace="fragments/navbar :: topNavbar('Songs')"></nav>
+    <h1>Best Songs</h1>
+    <ul>
+        <li th:each="song : ${bestSongs}">
+            <span th:text="${song.getTitle()}"></span>
+        </li>
+    </ul>
+    
+    <a href="../movies">Go to best Movies</a>
+    <a href="../"> Go to Home Page</a>
+</body>
+</html>
